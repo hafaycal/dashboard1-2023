@@ -24,6 +24,7 @@ import plotly.graph_objects as go
 import shap
 from streamlit_shap import st_shap
 import numpy as np
+from app import app as application
 ###---------- load data -------- 
 
 #------------- Affichage des infos client en HTML------------------------------------------
@@ -258,17 +259,17 @@ def main():
         st.write("Le DataFrame est vide.")    
 
 def lecture_X_test_original():
-    X_test_original = pd.read_csv("Data/X_test_original.csv")
+    X_test_original = pd.read_csv("data/X_test_original.csv")
     X_test_original = X_test_original.rename(columns=str.lower)
     return X_test_original
 
 def lecture_X_test_clean():
-    X_test_clean = pd.read_csv("Data/X_test_clean.csv")
+    X_test_clean = pd.read_csv("data/X_test_clean.csv")
     #st.dataframe(X_test_clean)
     return X_test_clean
 
 def lecture_description_variables():
-    description_variables = pd.read_csv("Data/description_variable.csv", sep=";")
+    description_variables = pd.read_csv("data/description_variable.csv", sep=";")
     return description_variables
 
 
