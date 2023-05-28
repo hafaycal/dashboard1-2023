@@ -24,7 +24,7 @@ import plotly.graph_objects as go
 import shap
 from streamlit_shap import st_shap
 import numpy as np
-from app import app as application
+
 ###---------- load data -------- 
 
 #------------- Affichage des infos client en HTML------------------------------------------
